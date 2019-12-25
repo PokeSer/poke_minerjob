@@ -3,5 +3,6 @@
 
 ## 1. Requirements
 - [RedEM:RP](https://github.com/RedEM-RP/redem_roleplay)
+- This resource uses Progress Bar, download it here [ProgressBar](https://github.com/PokeSerGG/RedM-ProgressBar) or remove it from the client
 - add ```ensure poke_minerjob``` in your server.cfg
 - Enjoy!
