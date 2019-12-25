@@ -9,6 +9,11 @@ Config.money = {
     ['max'] = 500
 }
 
+Config.xp = {
+    ['min'] = 15,
+    ['max'] = 35
+}
+
 Config.Zonas = {
     ['init'] = { x = 2750.79, y = 1325.35, z = 69.89 },
     ['Miner1'] = { x = 2760.95, y = 1310.22, z = 70.04 },

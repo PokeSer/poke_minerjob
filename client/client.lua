@@ -1,4 +1,5 @@
 local dinero = math.random(Config.money['min'], Config.money['max'])
+local xp = math.random(Config.xp['min'], Config.xp['max'])
 local PrimeraMina = false
 local Mina1 = false
 local Mina2 = false
@@ -98,9 +99,9 @@ Citizen.CreateThread(function()
                 if IsControlJustPressed(0, 0xC7B5340A) then
                     if IsPedInAnyVehicle(PlayerPedId(), true) then
 						DeleteVehicle(GetVehiclePedIsIn(PlayerPedId()))
-						TriggerEvent('chatMessage', Language.translate[Config.lang]['miner'], {243, 159, 0},Language.translate[Config.lang]['completejob'] ..dinero.."$")
+						TriggerEvent('chatMessage', Language.translate[Config.lang]['miner'], {243, 159, 0},Language.translate[Config.lang]['completejob'] ..dinero.."$ | "..xp.."XP")
 						RemoveBlip(blip6)
-						TriggerServerEvent('poke_minero:cobrar', dinero)
+						TriggerServerEvent('poke_minero:cobrar', dinero, xp)
                         Entrega = false
                         Mina1 = false
 					else
