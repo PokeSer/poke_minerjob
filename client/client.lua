@@ -140,7 +140,7 @@ end)
 
 RegisterNetEvent('poke_minero:comcrono')
 AddEventHandler('poke_minero:comcrono', function()
-	local timer = 240
+	local timer = 150
 
 	Citizen.CreateThread(function()
 		while timer > 0 and Entrega do
@@ -169,14 +169,14 @@ end)
 
 function animacion()
     TaskStartScenarioInPlace(PlayerPedId(), GetHashKey('WORLD_HUMAN_PICKAXE_WALL'), 20000, true, false, false, false)
-    exports['progressBars']:startUI(20000, "Trabajando en la mina")
+    exports['progressBars']:startUI(20000, Language.translate[Config.lang]['mining'])
     Wait(20000)
     ClearPedTasksImmediately(PlayerPedId())
 end
 
 function animacion2()
     TaskStartScenarioInPlace(PlayerPedId(), GetHashKey('PROP_HUMAN_SACK_STORAGE_IN'), 7000, true, false, false, false)
-    exports['progressBars']:startUI(7000, "Colocando la bolsa")
+    exports['progressBars']:startUI(7000, Language.translate[Config.lang]['placing'])
     Wait(7000)
     ClearPedTasksImmediately(PlayerPedId())
 end

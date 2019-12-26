@@ -15,7 +15,9 @@ Language.translate = {
         ['temp'] = 'TEMPORIZADOR: ',
         ['seconds'] = ' SEGUNDOS RESTANTES',
         ['lose'] = 'No has llegado a tiempo, trabajo cancelado',
-        ['pressf'] = 'Pulsa [ENTER] para entregar los minerales'
+        ['pressf'] = 'Pulsa [ENTER] para entregar los minerales',
+        ['mining'] = 'Trabajando en la mina',
+        ['placing'] = 'Colocando la bolsa'
     },
     ['en'] = {
         ['press'] = 'Press [ENTER] to start work',
@@ -31,6 +33,26 @@ Language.translate = {
         ['temp'] = 'TIMER: ',
         ['seconds'] = ' SECOND REMAINS',
         ['lose'] = 'You havent arrived on time, job canceled',
-        ['pressf'] = 'Press [ENTER] to deliver the minerals'
+        ['pressf'] = 'Press [ENTER] to deliver the minerals',
+        ['mining'] = 'Working in the mine',
+        ['placing'] = 'Placing the bag'
+    },
+    ['fr'] = {
+        ['press'] = 'Appuyer sur [ENTER] pour commencer a travailler',
+        ['nojob'] = 'Vous nêtes pas mineur',
+        ['gopos'] = 'Diriger vous vers le marqueur',
+        ['pressc'] = 'Appuyer sur [ENTER] pour charger le véhicule',
+        ['miner'] = 'Mineur',
+        ['goto'] = 'Diriger vous vers le prochain marqueur',
+        ['load'] = 'Chargez tous les minérais dans le véhicule que nous avons laissé',
+        ['carry'] = 'Apporter tous les minérais au client',
+        ['completejob'] = 'Vous avez terminé votre travail, vous avez gagné ',
+        ['noveh'] = 'Vous devez livrer tous les minérais dans le véhicule fourni',
+        ['temp'] = 'TEMPS: ',
+        ['seconds'] = ' SECONDES RESTANTES',
+        ['lose'] = 'Vous nêtes pas arrivé à lheure, le travail a été annulé',
+        ['pressf'] = 'Appuyer sur [ENTER] pour délivrer les minéraux',
+        ['mining'] = 'Travailler dans la mine',
+        ['placing'] = 'Mise en place du sac'
     }
 }
