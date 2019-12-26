@@ -31,7 +31,7 @@ Citizen.CreateThread(function()
                 DrawTxt(Language.translate[Config.lang]['press'], 0.3, 0.95, 0.4, 0.4, true, 255, 255, 255, 150, false)
                 if IsControlJustPressed(0, 0xC7B5340A) then
                     animacion()
-					TriggerEvent('chatMessage', Language.translate[Config.lang]['miner'], {243, 159, 0},Language.translate[Config.lang]['goto'])
+                    TriggerEvent("redemrp_notification:start", Language.translate[Config.lang]['goto'], 5)
 					RemoveBlip(blip)
 					blip2 = N_0x554d9d53f696d002(203020899, Config.Zonas['Miner2'].x, Config.Zonas['Miner2'].y, Config.Zonas['Miner2'].z)
                     SetBlipSprite(blip2, -570710357, 1)
@@ -44,7 +44,7 @@ Citizen.CreateThread(function()
                 DrawTxt(Language.translate[Config.lang]['press'], 0.3, 0.95, 0.4, 0.4, true, 255, 255, 255, 150, false)
                 if IsControlJustPressed(0, 0xC7B5340A) then
                     animacion()
-                    TriggerEvent('chatMessage', Language.translate[Config.lang]['miner'], {243, 159, 0},Language.translate[Config.lang]['goto'])
+                    TriggerEvent("redemrp_notification:start", Language.translate[Config.lang]['goto'], 5)
                     RemoveBlip(blip2)
                     blip3 = N_0x554d9d53f696d002(203020899, Config.Zonas['Miner3'].x, Config.Zonas['Miner3'].y, Config.Zonas['Miner3'].z)
                     SetBlipSprite(blip3, -570710357, 1)
@@ -57,7 +57,7 @@ Citizen.CreateThread(function()
                 DrawTxt(Language.translate[Config.lang]['press'], 0.3, 0.95, 0.4, 0.4, true, 255, 255, 255, 150, false)
                 if IsControlJustPressed(0, 0xC7B5340A) then
                     animacion()
-                    TriggerEvent('chatMessage', Language.translate[Config.lang]['miner'], {243, 159, 0},Language.translate[Config.lang]['goto'])
+                    TriggerEvent("redemrp_notification:start", Language.translate[Config.lang]['goto'], 5)
                     RemoveBlip(blip3)
                     blip4 = N_0x554d9d53f696d002(203020899, Config.Zonas['Miner4'].x, Config.Zonas['Miner4'].y, Config.Zonas['Miner4'].z)
                     SetBlipSprite(blip4, -570710357, 1)
@@ -70,7 +70,7 @@ Citizen.CreateThread(function()
                 DrawTxt(Language.translate[Config.lang]['press'], 0.3, 0.95, 0.4, 0.4, true, 255, 255, 255, 150, false)
                 if IsControlJustPressed(0, 0xC7B5340A) then
                     animacion()
-                    TriggerEvent('chatMessage', Language.translate[Config.lang]['miner'], {243, 159, 0},Language.translate[Config.lang]['load'])
+                    TriggerEvent("redemrp_notification:start", Language.translate[Config.lang]['load'], 5)
                     RemoveBlip(blip4)
                     blip5 = N_0x554d9d53f696d002(203020899, Config.Zonas['Vehicle'].x, Config.Zonas['Vehicle'].y, Config.Zonas['Vehicle'].z)
                     SetBlipSprite(blip5, -570710357, 1)
@@ -84,7 +84,7 @@ Citizen.CreateThread(function()
                 DrawTxt(Language.translate[Config.lang]['pressc'], 0.3, 0.95, 0.4, 0.4, true, 255, 255, 255, 150, false)
                 if IsControlJustPressed(0, 0xC7B5340A) then
                     animacion2()
-                    TriggerEvent('chatMessage', Language.translate[Config.lang]['miner'], {243, 159, 0},Language.translate[Config.lang]['carry'])
+                    TriggerEvent("redemrp_notification:start", Language.translate[Config.lang]['carry'], 5)
                     RemoveBlip(blip5)
                     blip6 = N_0x554d9d53f696d002(203020899, Config.Zonas['Entrega'].x, Config.Zonas['Entrega'].y, Config.Zonas['Entrega'].z)
                     SetBlipSprite(blip6, -570710357, 1)
@@ -98,14 +98,14 @@ Citizen.CreateThread(function()
                 DrawTxt(Language.translate[Config.lang]['pressf'], 0.3, 0.95, 0.4, 0.4, true, 255, 255, 255, 150, false)
                 if IsControlJustPressed(0, 0xC7B5340A) then
                     if IsPedInAnyVehicle(PlayerPedId(), true) then
-						DeleteVehicle(GetVehiclePedIsIn(PlayerPedId()))
-						TriggerEvent('chatMessage', Language.translate[Config.lang]['miner'], {243, 159, 0},Language.translate[Config.lang]['completejob'] ..dinero.."$ | "..xp.."XP")
+                        DeleteVehicle(GetVehiclePedIsIn(PlayerPedId()))
+                        TriggerEvent("redemrp_notification:start", Language.translate[Config.lang]['completejob'] ..dinero.."$ | "..xp.."XP", 5)
 						RemoveBlip(blip6)
 						TriggerServerEvent('poke_minero:cobrar', dinero, xp)
                         Entrega = false
                         Mina1 = false
-					else
-                        TriggerEvent('chatMessage', Language.translate[Config.lang]['miner'], {243, 159, 0},Language.translate[Config.lang]['noveh'])
+                    else
+                        TriggerEvent("redemrp_notification:start", Language.translate[Config.lang]['noveh'], 5)
                     end
                 end
             end
@@ -156,8 +156,8 @@ AddEventHandler('poke_minero:comcrono', function()
 		while Entrega do
 			Citizen.Wait(0)
 			DrawTxt(Language.translate[Config.lang]['temp']..timer..Language.translate[Config.lang]['seconds'], 0.4, 0.92, 0.4, 0.4, true, 255, 255, 255, 150, false)
-			if timer < 1 then
-				TriggerEvent('chatMessage', Language.translate[Config.lang]['miner'], {243, 159, 0},Language.translate[Config.lang]['lose'])
+            if timer < 1 then
+                TriggerEvent("redemrp_notification:start", Language.translate[Config.lang]['lose'], 5)
 				Mina1, Mina2, Mina3, Mina4, FinMina, Entrega, PrimeraMina = false, false, false, false, false, false, false
 				DeleteVehicle(spawncar)
 				RemoveBlip(blip6)

@@ -3,9 +3,9 @@ AddEventHandler('poke_minero:comjob', function()
     TriggerEvent('redemrp:getPlayerFromId', source, function(user)
         if user.getJob() == Config.JobName then
             TriggerClientEvent('poke_minero:comienzo', source)
-            TriggerClientEvent('chatMessage', source, Language.translate[Config.lang]['miner'], {243, 159, 0}, Language.translate[Config.lang]['gopos'])
+            TriggerClientEvent("redemrp_notification:start", source, Language.translate[Config.lang]['gopos'], 5)
         else
-            TriggerClientEvent('chatMessage', source, Language.translate[Config.lang]['miner'], {243, 159, 0}, Language.translate[Config.lang]['nojob'])
+            TriggerClientEvent("redemrp_notification:start", source, Language.translate[Config.lang]['nojob'], 5)
         end
     end)
 end)
