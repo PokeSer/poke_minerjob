@@ -1,6 +1,8 @@
-# poke_minerjob
+# NOT SUPPORT
 - I am not giving more support of resources created for this framework, due to its toxic community.
- Mining work with many customization options in config.lua
+
+# poke_minerjob
+- Mining work with many customization options in config.lua
 
 ## 1. Requirements
 - [RedEM:RP](https://github.com/RedEM-RP/redem_roleplay)
