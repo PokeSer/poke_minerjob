@@ -1,4 +1,5 @@
 # poke_minerjob
+- I am not giving more support of resources created for this framework, due to its toxic community.
  Mining work with many customization options in config.lua
 
 ## 1. Requirements
