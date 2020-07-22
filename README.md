@@ -1,5 +1,5 @@
 # NOT SUPPORT
-- I am not giving more support of resources created for this framework, due to its toxic community.
+- I am not giving more support of resources created for this framework.
 
 # poke_minerjob
 - Mining work with many customization options in config.lua
